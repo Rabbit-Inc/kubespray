@@ -1,16 +1,34 @@
 Working with the kubespray repo
 ===============================
 
-git pull https://github.com/kubernetes-incubator/kubespray.git master
+https://help.github.com/articles/syncing-a-fork/
+https://help.github.com/articles/pushing-to-a-remote/
+https://help.github.com/articles/dealing-with-non-fast-forward-errors/
 
-git rebase -Xtheirs master
+git fetch upstream
+git checkout master
+git pull upstream master (this is supposed to merge too)
+git merge upstream master
+
+idk one of these I guess
+git pull origin master
 
 git checkout -b brandon/thing
 git commit
 git push -u -f origin brandon/inventory080818-2
-
 git checkout master
+git rebase -Xtheirs master
 
+
+
+10090  git rebase master -X theirs
+10095  git pull
+10098  git checkout brandon/makesideclusterslikeprod
+10100  git push
+10101  git checkout master
+10102  git fetch
+10103  git pull --rebase origin master
+10104  ls
 
 
 Running Kubespray
